@@ -57,7 +57,7 @@
         margin: 20px;
         list-style: none;
         display: inline-block;
-        
+
     }
 
     #menu li a {
@@ -72,7 +72,7 @@
         transition: background-size 0.15s;
         border-radius: 3px;
     }
-    
+
     #menu li a:hover {
         background-size: 100% 2.5px;
     }
@@ -85,6 +85,27 @@
         background: url("images/header.jpg") no-repeat top center / cover;
         position: relative;
         height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box2 h1 {
+        background: url("images/header.jpg") no-repeat left center / cover;
+        color: transparent;
+        -webkit-background-clip: text;
+        font-weight: bold;
+    }
+
+
+    .welcome {
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 380px;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0.6);
     }
 
     #about {
