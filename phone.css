@@ -1,0 +1,192 @@
+@media only screen and (max-width:799px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-size: 100%;
+        font-family: fantasy;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        background-color: beige;
+        position: relative;
+    }
+
+    nav {
+        user-select: none;
+        padding: 20px;
+        z-index: 999;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        text-align: center;
+        /*        background-color: white;*/
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    nav #logo {
+        /*        background-color: blue;*/
+        padding: 15px;
+        color: #ffffff;
+        font-size: 35px;
+    }
+
+    /*    hamgurger  */
+
+    #hamburger input {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        cursor: pointer;
+        opacity: 0;
+        /* hide this */
+        z-index: 2;
+
+    }
+
+    #hamburger span {
+        display: block;
+        width: 49px;
+        height: 5px;
+        background: #cdcdcd;
+        border-radius: 3px;
+
+        top: 20px;
+        right: 40px;
+        position: absolute;
+
+        z-index: 1;
+        transform-origin: top left;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #hamburger span:nth-child(2) {
+        top: 40px;
+        right: 40px;
+        position: absolute;
+
+    }
+
+    #hamburger span:nth-child(3) {
+        top: 60px;
+        right: 40px;
+        position: absolute;
+        transform-origin: bottom left;
+
+    }
+
+    #hamburger input:checked ~ span {
+        width: 60px;
+        transform-origin: 5px 20px;
+        opacity: 1;
+        transform: rotate(45deg);
+        background: #ffffff;
+    }
+
+    #hamburger input:checked ~ span:nth-child(2) {
+        opacity: 0;
+        width: 50px;
+        transform: rotate(0deg) scale(1, 1);
+    }
+
+    #hamburger input:checked ~ span:nth-child(3) {
+        transform-origin: 13px -13px;
+        transform: rotate(-45deg);
+    }
+    
+    #hamburger input:checked ~ ul {
+        transform: none;
+    }
+
+    /* --------------------------------------------------------- */
+    #menu {
+        position: relative;
+        width: 130px;
+        height: 350px;
+        margin-top: 60px;
+        margin-right: -20px;
+/*        background-color: #2a9d2a;*/
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+        transition: transform 0.5s;
+    }
+
+    
+
+
+    #menu li {
+        margin: 20px;
+        list-style: none;
+        display: flex;
+    }
+
+    #menu li a {
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 5px;
+        background-image: linear-gradient(white,white);
+        background-position: 0px 30px;
+        background-size: 0 2.5px;
+        background-repeat: no-repeat;
+        transition: background-size 0.15s;
+        border-radius: 3px;
+    }
+    #menu li a:hover{
+        background-size: 100% 2.5px;
+    }
+
+    .box {
+        width: 100%;
+        float: left;
+        background: url("images/header.jpg") no-repeat top center / cover;
+        position: relative;
+        height: 100vh;
+    }
+
+    #about {
+        background-color: #ED6663;
+    }
+
+    #product {
+        background-color: #B52B65;
+    }
+
+    #pricing {
+        background-color: #3C2C3E;
+    }
+
+    #contact {
+        background-color: #B52B65;
+    }
+
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+
+}
